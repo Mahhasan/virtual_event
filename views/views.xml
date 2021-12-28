@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="virtual_event.list">
+      <field name="name">virtual_event list</field>
+      <field name="model">virtual_event.virtual_event</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="virtual_event.action_window">
+      <field name="name">virtual_event window</field>
+      <field name="res_model">virtual_event.virtual_event</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="virtual_event.action_server">
+      <field name="name">virtual_event server</field>
+      <field name="model_id" ref="model_virtual_event_virtual_event"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="virtual_event" id="virtual_event.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="virtual_event.menu_1" parent="virtual_event.menu_root"/>
+    <menuitem name="Menu 2" id="virtual_event.menu_2" parent="virtual_event.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="virtual_event.menu_1_list" parent="virtual_event.menu_1"
+              action="virtual_event.action_window"/>
+    <menuitem name="Server to list" id="virtual_event" parent="virtual_event.menu_2"
+              action="virtual_event.action_server"/>
+-->
+  </data>
+</odoo>

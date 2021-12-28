@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_virtual_event,access_virtual_event,model_virtual_event,base.group_user,1,1,1,1
+access_virtual_event_stall,access_virtual_event_stall,model_virtual_event_stall,base.group_user,1,1,1,1
+access_virtual_event_sponsor,access_virtual_event_sponsor,model_virtual_event_sponsor,base.group_user,1,1,1,1
+access_virtual_event_webinar,access_virtual_event_webinar,model_virtual_event_webinar,base.group_user,1,1,1,1
+access_virtual_webinar_guest,access_virtual_webinar_guest,model_virtual_webinar_guest,base.group_user,1,1,1,1
+access_virtual_webinar_audience,access_virtual_webinar_audience,model_virtual_webinar_audience,base.group_user,1,1,1,1

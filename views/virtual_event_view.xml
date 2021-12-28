@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Search View-->
+        <record id="virtual_event_search_view" model="ir.ui.view">
+            <field name="name">virtual.event.search.view</field>
+            <field name="model">virtual.event</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Tree View-->
+        <record id="virtual_event_tree_view" model="ir.ui.view">
+            <field name="name">virtual.event.tree.view</field>
+            <field name="model">virtual.event</field>
+            <field name="arch" type="xml">
+                <tree string="Virtual Event ASM">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form View-->
+        <record id="virtual_event_form_view" model="ir.ui.view">
+            <field name="name">virtual.event.form.view</field>
+            <field name="model">virtual.event</field>
+            <field name="arch" type="xml">
+                <form string="Virtual Event ASM">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="company"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                        </group>
+                        <group>
+                            <field name="end_date"/>
+                        </group>
+                         <group>
+                            <field name="event_url"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="stall" string="Stall">
+                            <field name="virtual_event_stall_ids">
+                                <tree string="Stall">
+                                    <field name="name"/>
+                                    <field name="document"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="sponsor" string="Sponsor">
+                            <field name="virtual_event_sponsor_ids">
+                                <tree string="Sponsor">
+                                    <field name="name"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="webinar" string="Webinar">
+                            <field name="virtual_event_webinar_ids">
+                                <tree string="Webinar">
+                                    <field name="name"/>
+                                    <field name="duration"/>
+                                    <field name="start_time"/>
+                                    <field name="guest"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </form>
+            </field>
+        </record>
+
+        <!--Act Window & Menu Configuration-->
+        <record id="action_virtual_event_view" model="ir.actions.act_window">
+            <field name="name">AEM</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">virtual.event</field>
+            <field name="domain">[]</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="virtual_event_tree_view"/>
+        </record>
+
+    </data>
+</odoo>

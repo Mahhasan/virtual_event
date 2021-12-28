@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Search View-->
+        <record id="virtual_event_sponsor_search_view" model="ir.ui.view">
+            <field name="name">virtual.event.sponsor.search.view</field>
+            <field name="model">virtual.event.sponsor</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Tree View-->
+        <record id="virtual_event_sponsor_tree_view" model="ir.ui.view">
+            <field name="name">virtual.event.sponsor.tree.view</field>
+            <field name="model">virtual.event.sponsor</field>
+            <field name="arch" type="xml">
+                <tree string="Virtual Event Sponsor">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form View-->
+        <record id="virtual_event_sponsor_form_view" model="ir.ui.view">
+            <field name="name">virtual.event.sponsor.form.view</field>
+            <field name="model">virtual.event.sponsor</field>
+            <field name="arch" type="xml">
+                <form string="Virtual Event Sponsor">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!--Act Window & Menu Configuration-->
+        <record id="action_virtual_event_sponsor_view" model="ir.actions.act_window">
+            <field name="name">Virtual Event Sponsor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">virtual.event.sponsor</field>
+            <field name="domain">[]</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="virtual_event_sponsor_tree_view"/>
+        </record>
+
+    </data>
+</odoo>

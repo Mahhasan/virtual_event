@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Search View-->
+        <record id="virtual_event_webinar_search_view" model="ir.ui.view">
+            <field name="name">virtual.event.webinar.search.view</field>
+            <field name="model">virtual.event.webinar</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Tree View-->
+        <record id="virtual_event_webinar_tree_view" model="ir.ui.view">
+            <field name="name">virtual.event.webinar.tree.view</field>
+            <field name="model">virtual.event.webinar</field>
+            <field name="arch" type="xml">
+                <tree string="Virtual Event Webinar">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form View-->
+        <record id="virtual_event_webinar_form_view" model="ir.ui.view">
+            <field name="name">virtual.event.webinar.form.view</field>
+            <field name="model">virtual.event.webinar</field>
+            <field name="arch" type="xml">
+                <form string="Virtual Event Webinar">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="duration"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="start_time"/>
+                        </group>
+                        <group>
+                            <field name="guest"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="guest" string="Guest">
+                            <field name="virtual_webinar_guest_ids">
+                                <tree string="Guest">
+                                    <field name="name"/>
+                                    <field name="organisation"/>
+                                    <field name="email"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="audience" string="Audience">
+                            <field name="virtual_webinar_audience_ids">
+                                <tree string="Audience">
+                                    <field name="name"/>
+                                    <field name="organisation"/>
+                                    <field name="email"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!--Act Window & Menu Configuration-->
+        <record id="action_virtual_event_webinar_view" model="ir.actions.act_window">
+            <field name="name">Virtual Event Webinar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">virtual.event.webinar</field>
+            <field name="domain">[]</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="virtual_event_webinar_tree_view"/>
+        </record>
+
+    </data>
+</odoo>

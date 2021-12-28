@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Search View-->
+        <record id="virtual_event_stall_search_view" model="ir.ui.view">
+            <field name="name">virtual.event.stall.search.view</field>
+            <field name="model">virtual.event.stall</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Tree View-->
+        <record id="virtual_event_stall_tree_view" model="ir.ui.view">
+            <field name="name">virtual.event.stall.tree.view</field>
+            <field name="model">virtual.event.stall</field>
+            <field name="arch" type="xml">
+                <tree string="Virtual Event Stall">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Form View-->
+        <record id="virtual_event_stall_form_view" model="ir.ui.view">
+            <field name="name">virtual.event.stall.form.view</field>
+            <field name="model">virtual.event.stall</field>
+            <field name="arch" type="xml">
+                <form string="Virtual Event Stall">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="document"/>
+                        </group>
+                        <group>
+                            <field name="gallery"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!--Act Window & Menu Configuration-->
+        <record id="action_virtual_event_stall_view" model="ir.actions.act_window">
+            <field name="name">Virtual Event Stall</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">virtual.event.stall</field>
+            <field name="domain">[]</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="virtual_event_stall_tree_view"/>
+        </record>
+
+    </data>
+</odoo>

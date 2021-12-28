@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Top Menu -->
+        <menuitem name="Virtual Event AEM"
+            id="menu_action_virtual_event_asm"
+            sequence="1" />
+
+
+        <!-- Master Data -->
+        <menuitem name="AEM"
+            id="menu_action_virtual_event"
+            parent="menu_action_virtual_event_asm"
+            action="action_virtual_event_view"
+            sequence="100" />
+         <!-- Master Data -->
+
+         
+
+
+    </data>
+</odoo>
