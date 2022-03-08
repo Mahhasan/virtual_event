@@ -7,3 +7,4 @@ from . import virtual_event_sponsor
 from . import virtual_event_webinar
 from . import virtual_webinar_guest
 from . import virtual_webinar_audience
+from . import virtual_webinar_schedule

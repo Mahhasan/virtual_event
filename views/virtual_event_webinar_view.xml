@@ -64,6 +64,15 @@
                                 </tree>
                             </field>
                         </page>
+                        <page name="audience" string="Schedule">
+                            <field name="virtual_webinar_schedule_ids">
+                                <tree string="Schedule">
+                                    <field name="name"/>
+                                    <field name="topic"/>
+                                    <field name="time"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </form>
             </field>

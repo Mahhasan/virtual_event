@@ -26,7 +26,6 @@
     'data': [
         'security/ir.model.access.csv',
 
-
         'views/virtual_event_view.xml',
         'views/menus.xml',
     ],

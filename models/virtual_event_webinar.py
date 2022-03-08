@@ -15,3 +15,4 @@ class VirtualEventWebinar(models.Model):
 
     virtual_webinar_guest_ids = fields.One2many('virtual.webinar.guest', 'virtual_webinar_id', string="Guest")
     virtual_webinar_audience_ids = fields.One2many('virtual.webinar.audience', 'virtual_webinar_id', string="Audience")
+    virtual_webinar_schedule_ids = fields.One2many('virtual.webinar.schedule', 'virtual_webinar_id', string="Schedule")
