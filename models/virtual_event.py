@@ -13,6 +13,6 @@ class VirtualEvent(models.Model):
     end_date = fields.Date(string="End Date")
     event_url = fields.Char(string="Event URL")
 
-    virtual_event_stall_ids = fields.One2many('virtual.event.stall','virtual_event_id', string="Stall")
-    virtual_event_sponsor_ids = fields.One2many('virtual.event.sponsor','virtual_event_id', string="Sponsor")
-    virtual_event_webinar_ids = fields.One2many('virtual.event.webinar','virtual_event_id', string="Webinar")
+    virtual_event_stall_ids = fields.One2many('virtual.event.stall', 'virtual_event_id', string="Stall")
+    virtual_event_sponsor_ids = fields.One2many('virtual.event.sponsor', 'virtual_event_id', string="Sponsor")
+    virtual_event_webinar_ids = fields.One2many('virtual.event.webinar', 'virtual_event_id', string="Webinar")
